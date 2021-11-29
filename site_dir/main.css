@@ -32,7 +32,6 @@ body {
   display: block;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  opacity: 1;
   position: relative;
   z-index: 0;
 }
@@ -49,7 +48,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(140, 45, 200, 0.4);
+  background-color: rgba(94, 0, 153, 0.45);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -66,12 +65,6 @@ body {
   line-height: 1.1;
   color: white;
 }
-.card__content-wrapper h1 {
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-.card__content-wrapper h1 span {
-  color: #aa5cdb;
-}
 .card__content-wrapper p {
   font-family: "Inter", sans-serif;
   text-align: center;
@@ -81,6 +74,10 @@ body {
 }
 .card__content-wrapper .card__heading {
   padding: 0 0 1.2rem 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+.card__content-wrapper .card__heading span {
+  color: #aa5cdb;
 }
 
 .card__stat-wrapper {
@@ -98,4 +95,84 @@ body {
 }
 .card__stat-wrapper > *:first-child {
   padding: 0;
+}
+
+@media screen and (min-width: 1440px) {
+  html,
+body {
+    height: 100%;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    height: 40%;
+    width: 80%;
+  }
+
+  .card__wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .card__wrapper picture {
+    flex-basis: 47.5%;
+    height: 100%;
+  }
+
+  .card__content-wrapper {
+    padding: 0 5rem 0 4.5rem;
+    flex-basis: 52.5%;
+  }
+  .card__content-wrapper h1,
+.card__content-wrapper h2 {
+    text-align: left;
+  }
+  .card__content-wrapper p {
+    text-align: left;
+    padding-right: 6rem;
+    padding-bottom: 4rem;
+  }
+  .card__content-wrapper .card__heading {
+    font-size: 2.5rem;
+  }
+
+  .card__image {
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 10px;
+  }
+
+  .card__image--gradient {
+    height: 100%;
+  }
+
+  .card__image--gradient::before {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 10px;
+  }
+
+  .card__stat-wrapper {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .card__stat-wrapper .card__stat-item {
+    padding: 0 3rem 0 0;
+  }
+  .card__stat-wrapper .card__stat-item h2 {
+    padding: 0.75rem 0 0 0;
+  }
 }
