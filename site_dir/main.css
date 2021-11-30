@@ -110,7 +110,7 @@ body {
   }
 
   .container {
-    height: 40%;
+    min-height: 40%;
     width: 80%;
   }
 
